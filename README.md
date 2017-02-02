@@ -1,7 +1,8 @@
 # ng2jh
-Angular 2
-Java Spring-boot / H2 in-memory database
-bootstrap 4
+
+### Angular 2
+### Java Spring-boot / H2 in-memory database
+### bootstrap 4
 
 ## Building for production
 
