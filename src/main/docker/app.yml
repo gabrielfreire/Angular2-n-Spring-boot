@@ -1,0 +1,16 @@
+version: '2'
+services:
+    ng2jh-app:
+        image: ng2jh
+        external_links:
+            - ng2jh-mysql:mysql
+        environment:
+            - SPRING_PROFILES_ACTIVE=prod,swagger
+            - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/ng2jh?useUnicode=true&characterEncoding=utf8&useSSL=false
+            - JHIPSTER_SLEEP=10 # gives time for the database to boot before the application
+        ports:
+            - 8080:8080
+    ng2jh-mysql:
+        extends:
+            file: mysql.yml
+            service: ng2jh-mysql
