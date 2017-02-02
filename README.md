@@ -36,5 +36,5 @@ and can be run by starting Spring Boot in one terminal (`./mvnw spring-boot:run`
 
 For more information, refer to the [Running tests page][].
 
-www.gabrielfreire.com.br
-https://br.linkedin.com/in/gabriel-freire-20929024
+#### www.gabrielfreire.com.br
+#### https://br.linkedin.com/in/gabriel-freire-20929024
