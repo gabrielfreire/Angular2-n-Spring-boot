@@ -1,0 +1,23 @@
+{
+    "ng2JhApp": {
+        "teste" : {
+            "home": {
+                "title": "Testes",
+                "createLabel": "Create a new Teste",
+                "createOrEditLabel": "Create or edit a Teste",
+                "search": "Search for Teste"
+            },
+            "created": "A new Teste is created with identifier {{ param }}",
+            "updated": "A Teste is updated with identifier {{ param }}",
+            "deleted": "A Teste is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Teste {{ id }}?"
+            },
+            "detail": {
+                "title": "Teste"
+            },
+            "name": "Name",
+            "data": "Data"
+        }
+    }
+}

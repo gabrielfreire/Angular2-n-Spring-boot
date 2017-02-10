@@ -1,0 +1,22 @@
+{
+    "ng2JhApp": {
+        "hello" : {
+            "home": {
+                "title": "Hellos",
+                "createLabel": "Criar novo Hello",
+                "createOrEditLabel": "Criar ou editar Hello",
+                "search": "Pesquisar por Hello"
+            },
+            "created": "Um novo Hello é criado com o identificador {{ param }}",
+            "updated": "Um Hello é atualizado com o identificador {{ param }}",
+            "deleted": "Um Hello é deletado com o identificador {{ param }}",
+            "delete": {
+                "question": "Tem certeza de que deseja excluir Hello {{ id }}?"
+            },
+            "detail": {
+                "title": "Hello"
+            },
+            "description": "Description"
+        }
+    }
+}

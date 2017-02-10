@@ -1,0 +1,22 @@
+{
+    "ng2JhApp": {
+        "testando" : {
+            "home": {
+                "title": "Testandos",
+                "createLabel": "Criar novo Testando",
+                "createOrEditLabel": "Criar ou editar Testando",
+                "search": "Pesquisar por Testando"
+            },
+            "created": "Um novo Testando é criado com o identificador {{ param }}",
+            "updated": "Um Testando é atualizado com o identificador {{ param }}",
+            "deleted": "Um Testando é deletado com o identificador {{ param }}",
+            "delete": {
+                "question": "Tem certeza de que deseja excluir Testando {{ id }}?"
+            },
+            "detail": {
+                "title": "Testando"
+            },
+            "name": "Name"
+        }
+    }
+}

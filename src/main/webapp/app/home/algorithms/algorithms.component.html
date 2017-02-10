@@ -1,0 +1,22 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-6">
+			<div class="form-group">
+				<label>Input an Array</label>
+				<input type="text" class="form-control" [(ngModel)]="insertion" placeholder="[32, 123, 3, 1235, 3, 12, 2]">
+				<button class="btn btn-large btn-block btn-default" (click)="insertionSort(insertion)">Sort with Insertion Sort Algorithm</button>
+				<label>Output: </label>
+				<h4>{{resultA}}</h4>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="form-group">
+				<label>Input an Array</label>
+				<input type="text" class="form-control" [(ngModel)]="bubble" placeholder="[32, 123, 3, 1235, 3, 12, 2]">
+				<button class="btn btn-large btn-block btn-default" (click)="bubbleSort(bubble)">Sort with Bubble Sort Algorithm</button>
+				<label>Output: </label>
+				<h4>{{resultB}}</h4>
+			</div>
+		</div>
+	</div>
+</div>

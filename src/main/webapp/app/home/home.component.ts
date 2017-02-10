@@ -15,6 +15,7 @@ import { Account, LoginModalService, Principal } from '../shared';
 export class HomeComponent implements OnInit {
     account: Account;
     modalRef: NgbModalRef;
+    greetings : string;
 
     constructor(
         private jhiLanguageService: JhiLanguageService,
@@ -26,6 +27,7 @@ export class HomeComponent implements OnInit {
     }
 
     ngOnInit() {
+        this.greetings = 'Welcome to Karma for Gods'; //Just testing some variables work
         this.principal.identity().then((account) => {
             this.account = account;
         });

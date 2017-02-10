@@ -1,0 +1,22 @@
+{
+    "ng2JhApp": {
+        "testando" : {
+            "home": {
+                "title": "Testandos",
+                "createLabel": "Create a new Testando",
+                "createOrEditLabel": "Create or edit a Testando",
+                "search": "Search for Testando"
+            },
+            "created": "A new Testando is created with identifier {{ param }}",
+            "updated": "A Testando is updated with identifier {{ param }}",
+            "deleted": "A Testando is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Testando {{ id }}?"
+            },
+            "detail": {
+                "title": "Testando"
+            },
+            "name": "Name"
+        }
+    }
+}
