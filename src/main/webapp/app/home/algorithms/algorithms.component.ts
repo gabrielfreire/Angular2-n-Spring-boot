@@ -6,9 +6,7 @@ import { Http, Response } from '@angular/http';
 @Component({
     selector: 'algorithms',
     templateUrl: './algorithms.component.html',
-    styleUrls: [],
-    providers: [AlgorithmService]
-
+    styleUrls: []
 })
 export class AlgorithmsComponent implements OnInit {
 
@@ -17,13 +15,14 @@ export class AlgorithmsComponent implements OnInit {
 	resultA: any;
 	resultB: any;
 
-	constructor(private algorithmService : AlgorithmService){
+	constructor(private algorithmService: AlgorithmService){
 
 	}
 	ngOnInit(){
 
 	}
 
+	//Use insertion sort
 	insertionSort(insertion){
 		this.algorithmService.makeInsertionSort(JSON.parse(insertion)).subscribe((res) =>
 			 {
@@ -35,7 +34,7 @@ export class AlgorithmsComponent implements OnInit {
 			}
 		)
 	}
-
+	//Use bubble sort
 	bubbleSort(bubble){
 		this.algorithmService.makeBubbleSort(JSON.parse(bubble)).subscribe(
 			(res) => {

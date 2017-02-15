@@ -11,7 +11,12 @@ import { Ng2JhAccountModule } from './account/account.module';
 import { Ng2JhEntityModule } from './entities/entity.module';
 
 import { LayoutRoutingModule } from './layouts';
-import { HomeComponent, AlgorithmsComponent } from './home';
+import { HomeComponent, 
+    AlgorithmsComponent, 
+    AlgorithmService, 
+    ChapterService, 
+    ChapterComponent, 
+    ContentService } from './home';
 import { customHttpProvider } from './blocks/interceptor/http.provider';
 import { PaginationConfig } from './blocks/config/uib-pagination.config';
 
@@ -44,7 +49,8 @@ import {
         ErrorComponent,
         PageRibbonComponent,
         ActiveMenuDirective,
-        FooterComponent
+        FooterComponent,
+        ChapterComponent
     ],
     providers: [
         ProfileService,
@@ -52,7 +58,10 @@ import {
         { provide: Document, useValue: document },
         customHttpProvider(),
         PaginationConfig,
-        UserRouteAccessService
+        UserRouteAccessService,
+        AlgorithmService,
+        ChapterService,
+        ContentService
     ],
     bootstrap: [ JhiMainComponent ]
 })

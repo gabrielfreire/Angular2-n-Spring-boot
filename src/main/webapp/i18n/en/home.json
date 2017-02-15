@@ -1,7 +1,7 @@
 {
     "home": {
         "title": "Welcome!",
-        "subtitle": "This is your homepage",
+        "subtitle": "This is a Unit test guide for Jasmine using Karma",
         "logged": {
             "message": "You are logged in as user \"{{username}}\"."
         },
@@ -12,7 +12,8 @@
             "facebook": "Gabriel on Facebook",
             "githubL": "Gabriel on Github"
         },
-        "like": "If you like this Documentation, don't forget to give us a star on",
-        "github": "GitHub"
+        "like": "If you like this Documentation, don't forget to give me a star on",
+        "github": "GitHub",
+        "chapterLearnAboutFlags": ""
     }
 }

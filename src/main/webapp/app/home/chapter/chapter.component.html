@@ -1,0 +1,17 @@
+<div *ngFor="let chapter of chapters">
+	<div class="col-md-12">
+		<div class="card">
+			<h3 class="card-header">
+				{{chapter.title}}
+			</h3>
+			<div class="card-block">
+				<h4 class="card-title">{{chapter.description}}</h4>
+				<div [innerHTML]="chapter.content">
+				</div>
+				<p class="card-text">
+					
+				</p>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,7 +1,7 @@
 {
     "home": {
         "title": "Bem vindo!",
-        "subtitle": "Esta é a página principal",
+        "subtitle": "Esta é um guia de testes unitários com Jasmine utilizando o Karma",
         "logged": {
             "message": "Você está logado como \"{{username}}\"."
         },
