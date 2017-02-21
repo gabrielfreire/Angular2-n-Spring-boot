@@ -3,3 +3,6 @@
     background-color: #f7f7f7;
     font-size: 75%;
 }
+:host /deep/ .comment{
+    color: green;
+}

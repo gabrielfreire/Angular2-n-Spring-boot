@@ -1,6 +1,6 @@
 {
     "home": {
-        "title": "Welcome!",
+        "title": "Welcome to Karma For Gods!",
         "subtitle": "This is a Unit test guide for Jasmine using Karma",
         "logged": {
             "message": "You are logged in as user \"{{username}}\"."

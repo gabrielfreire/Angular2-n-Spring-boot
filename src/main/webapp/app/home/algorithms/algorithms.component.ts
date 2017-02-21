@@ -24,14 +24,19 @@ export class AlgorithmsComponent implements OnInit {
 
 	//Use insertion sort
 	insertionSort(insertion){
-		this.algorithmService.makeInsertionSort(JSON.parse(insertion)).subscribe((res) =>
+		this.algorithmService.makeInsertionSort(JSON.parse(insertion)).subscribe(
+			(res) =>
 			 {
 				if(res.status == 200){
 					this.resultA = res.json().sortedArray;
 				}else{
 					this.resultA = res.status;
 				}
+			},
+			(res) =>{
+				console.log("error", res.json());
 			}
+			
 		)
 	}
 	//Use bubble sort
@@ -43,6 +48,9 @@ export class AlgorithmsComponent implements OnInit {
 				}else{
 					this.resultB = res.status;
 				}
+			},
+			(res) =>{
+				console.log("error", res.json());
 			}
 		)
 	}

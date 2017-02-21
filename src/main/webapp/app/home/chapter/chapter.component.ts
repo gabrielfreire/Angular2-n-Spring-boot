@@ -11,10 +11,10 @@ import { JhiLanguageService } from 'ng-jhipster';
 export class ChapterComponent implements OnInit {
 	chapters: Chapter[];
 	constructor(private chapterService: ChapterService, private jhiLanguageService: JhiLanguageService){
-		//TODO something when this component thats	
+		//TODO something when this component is created	
 	}
-	//Get the chapters
 	ngOnInit(){
+		//Get the chapters
 		this.chapters = this.chapterService.getChapters();
 	}
 }

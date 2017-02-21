@@ -1,6 +1,6 @@
 {
     "home": {
-        "title": "Bem vindo!",
+        "title": "Bem vindo ao Karma for Gods!",
         "subtitle": "Esta é um guia de testes unitários com Jasmine utilizando o Karma",
         "logged": {
             "message": "Você está logado como \"{{username}}\"."
@@ -12,7 +12,7 @@
             "facebook": "Gabriel no Facebook",
             "githubL": "Gabriel no Github"
         },
-        "like": "Se você gosta desta Documentação, não se esqueça de avaliar no",
+        "like": "Se você gosta desta Documentação, não se esqueça de dar uma estrela no",
         "github": "GitHub"
     }
 }

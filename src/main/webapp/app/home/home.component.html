@@ -1,10 +1,10 @@
 <div class="row">
-    <div class="col-md-3">
+<!--     <div class="col-md-3">
         <span class="hipster img-fluid img-rounded"></span>
-    </div>
-    <div class="col-md-9">
-        <h1 class="display-4" jhiTranslate="home.title">Welcome!</h1>
-        <p class="lead" jhiTranslate="home.subtitle">This is your homepage</p>
+    </div> -->
+    <div class="col-md-12">
+        <h1 class="title-header" jhiTranslate="home.title">Welcome to Karma for Gods!</h1>
+        <p class="title-lead" jhiTranslate="home.subtitle">This is your homepage</p>
         <div [ngSwitch]="isAuthenticated()">
             <div class="alert alert-success" *ngSwitchCase="true">
                 <h2>{{greetings}}</h2>
@@ -14,11 +14,11 @@
 
         </div>
 
-        <p jhiTranslate="home.question">
+        <p class="title-lead" jhiTranslate="home.question">
             If you have any question on This Karma Documentation:
         </p>
 
-        <ul>
+        <ul class="my-list">
             <li><a href="http://www.gabrielfreire.com.br/" target="_blank" jhiTranslate="home.link.homepage">Gabriel Freire homepage</a></li>
             <li><a href="https://br.linkedin.com/in/gabriel-freire-20929024" target="_blank" jhiTranslate="home.link.linkedin">Gabriel on LinkedIn</a></li>
             <li><a href="https://www.facebook.com/gabrielfreiredev" target="_blank" jhiTranslate="home.link.facebook">Gabriel on Facebook</a></li>
@@ -26,7 +26,7 @@
         </ul>
 
         <p>
-            <span jhiTranslate="home.like">If you like this Documentation, don't forget to give us a star on</span> <a href="https://github.com/gabrielfreire/Angular2-n-Spring-boot" target="_blank" jhiTranslate="home.github">Github</a>!
+            <span class="title-lead" jhiTranslate="home.like">If you like this Documentation, don't forget to give me a star on </span> <a class="github-link" href="https://github.com/gabrielfreire/Angular2-n-Spring-boot" target="_blank" jhiTranslate="home.github">Github!</a>
         </p>
     </div>
     <chapter></chapter>
