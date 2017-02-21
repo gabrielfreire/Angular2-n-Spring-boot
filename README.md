@@ -1,4 +1,4 @@
-# ng2jh
+# Karma Documentation for my teammates at Accenture
 
 ### * Angular 2
 ### * Java Spring-boot / H2 in-memory database
@@ -6,7 +6,7 @@
 
 ## Building for production
 
-To optimize the ng2jh application for production, run:
+To optimize the Karma Documentation application for production, run:
 
     ./mvnw -Pprod clean package
 
@@ -17,11 +17,10 @@ To ensure everything worked, run:
 
 Then navigate to [http://localhost:8080](http://localhost:8080) in your browser.
 
-Refer to [Using JHipster in production][] for more details.
 
 ## Testing
 
-To launch your application's tests, run:
+To launch this application's tests, run:
 
     ./mvnw clean test
 
@@ -34,7 +33,7 @@ Unit tests are run by [Karma][] and written with [Jasmine][]. They're located in
 UI end-to-end tests are powered by [Protractor][], which is built on top of WebDriverJS. They're located in `src/test/javascript/e2e`
 and can be run by starting Spring Boot in one terminal (`./mvnw spring-boot:run`) and running the tests (`gulp itest`) in a second one.
 
-For more information, refer to the [Running tests page][].
+Not done yet, thought!
 
 #### www.gabrielfreire.com.br
 #### https://br.linkedin.com/in/gabriel-freire-20929024
