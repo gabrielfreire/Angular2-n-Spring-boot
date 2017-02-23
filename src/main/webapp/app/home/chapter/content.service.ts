@@ -99,12 +99,12 @@ export class ContentService implements OnInit {
     <pre><code>
     it('Should set greetings to Hello World', function(){ <span class="comment">//This is the second condition response altData being passed now!</span>
     	alternativeData = true; <span class="comment">//See? i am setting alternativeData to TRUE now (before instanciating the controller) so we can resolve the altData response object</span>
-    	yourController = createController();
+    	yourController = createController(); <span class="comment">//Now we create the controller again with the alternativeData pointing to TRUE!</span>
     	rootScope.$digest();
     	yourController.solicitar();
 
     	expect(yourServiceFake.solicitar).toHaveBeenCalled();
-    	rootScope.$digest();
+    	rootScope.$digest(); <span class="comment">//$digest cycle to make async calls and have access to solicitar() callbacks!</span>
 
     	expect(yourController.data).toBeDefined();
     	expect(yourController.data).toEqual({ message: 'Hello' });

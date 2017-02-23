@@ -11,9 +11,19 @@ Main page styles
 }
 .title-header {
     text-align: center;
+    background: url("../../content/images/charmander-gif.gif") no-repeat center center;
     display: block;
     font-size: 80pt;
+    background-size: contain;
+    background-position-x: -20px;
+    background-position-y: 29px;
 }
+/*.logo-img {
+    height: 100%;
+    background: url("../../../content/images/karma.png") no-repeat center center;
+    background-size: contain;
+    width: 100%;
+}*/
 .title-lead {
 	display: block;
     text-align: center;
@@ -30,6 +40,28 @@ Main page styles
     text-align: center;
     font-size: 15pt;
     font-family: monospace;
+}
+.btn-github{
+	color: #00de6f;
+    font-weight: bold;
+    font-family: cursive;
+    text-shadow: lime 0 0 9px;
+    background-color: #000000;
+    border-color: #6f6f6f;
+    transition: 0.1s linear;
+}
+.btn-github:hover{
+    color: #000000;
+    font-weight: bold;
+    font-family: monospace;
+    text-shadow: #151515 0 0 9px;
+    background-color: #00bd3a;
+    border-color: #5ffd88;
+}
+.hr-k{
+	background-color: #afffe1;
+    height: 1px;
+    box-shadow: #00ff43 0 0 30px 1px;
 }
 
 /* wait autoprefixer update to allow simple generation of high pixel density media query */

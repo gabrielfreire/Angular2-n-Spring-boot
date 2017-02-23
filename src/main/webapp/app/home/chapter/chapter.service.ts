@@ -7,6 +7,8 @@ import { ContentService } from "./content.service";
 export class ChapterService{
 	chapters: Chapter[] = [];
 	constructor(private contentService: ContentService){
+		this.createChapter(this.chapterItAndDescribe);
+		this.createChapter(this.chapterStructure);
 		this.createChapter(this.chapterFactory);
 		this.createChapter(this.chapterService);
 		this.createChapter(this.chapterMockAModal);
@@ -27,6 +29,12 @@ export class ChapterService{
 								"Coming Soon...");
 	chapterService = new Chapter("How to mock a Service", 
 								"Learn how to mock a API calling service using $httpBackEnd from Angular Mocks", 
+								"Coming Soon...");
+	chapterStructure = new Chapter("The structure of a .spec file", 
+								"Demo of a .spec file", 
+								"Coming Soon...");
+	chapterItAndDescribe = new Chapter("it() and describe()", 
+								"Definitions for it() function and describe() function", 
 								"Coming Soon...");
 
 	getChapters(){
