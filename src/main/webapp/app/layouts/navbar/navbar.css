@@ -7,9 +7,9 @@ Navbar
 }
 
 .jh-navbar {
-    background-color: #008a64;
+    background-color: black;
     padding: .2em 1em;
-    box-shadow: #1a541c 0px 2px 19px 0px;
+    /*box-shadow: #1a541c 0px 2px 19px 0px;*/
 }
 
 .jh-navbar .profile-image {
@@ -37,7 +37,7 @@ Navbar
 
 .jh-navbar a.nav-link {
     font-weight: 400;
-    font-family: cursive;
+    font-family: monospace;
     font-size: 1.9rem;
 }
 
