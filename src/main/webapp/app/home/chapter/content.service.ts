@@ -1,12 +1,121 @@
-import { Injectable, OnInit } from "@angular/core";
+import { Injectable } from "@angular/core";
 
 @Injectable()
-export class ContentService implements OnInit {
+export class ContentService {
+	itAndDescribe = `
+		<strong>Jasmine is a behavior-driven development framework for testing JavaScript code</strong>
+		<p>It does not depend on any other JavaScript frameworks. It does not require a DOM. 
+		And it has a clean, obvious syntax so that you can easily write tests</p>
+		<p>A test suite begins with a call to the global Jasmine function describe with two parameters: a string and a function. 
+		The string is a name or title for a spec suite - usually what is being tested. 
+		The function is a block of code that implements the suite.</p>
+		
+		<h3><strong>Specs</strong></h3>
+		<p>Specs are defined by calling the global Jasmine function it, which, like describe takes a string and a function. 
+		The string is the title of the spec and the function is the spec, or test. A spec contains one or more expectations 
+		that test the state of the code. An expectation in Jasmine is an assertion that is either true or false. 
+		A spec with all true expectations is a passing spec. A spec with one or more false expectations is a failing spec.</p>
+
+		<h3><strong>It's just Functions</strong></h3>
+		<p>Since describe and it blocks are functions, they can contain any executable code necessary to implement the test. 
+		JavaScript scoping rules apply, so variables declared in a describe are available to any it block inside the suite.</p>
+
+		<strong>Example: </strong>
+		<pre><code data-language="javascript">
+		describe("A test suite", function() {
+		  it("contains spec with an expectation", function() {
+		    expect(true).toBe(true);
+		  });
+		});	
+		</pre></code>
+
+		<h3><strong>Expectations</strong></h3>
+		<p>Expectations are built with the function expect which takes a value, called the actual. 
+		It is chained with a Matcher function, which takes the expected value.</p>
+		<pre><code data-language="javascript">
+		it("and has a positive case", function() {
+		  expect(true).toBe(true);
+		});
+		it("and can have a negative case", function() {
+	      expect(false).not.toBe(true);
+	  	});
+		</pre></code>
+		<strong>Matchers</strong>
+		<p>Each matcher implements a boolean comparison between the actual value and the expected value. 
+		It is responsible for reporting to Jasmine if the expectation is true or false. Jasmine will then 
+		pass or fail the spec.</p>
+		<p>Any matcher can evaluate to a negative assertion by chaining the call to expect with a not before calling 
+		the matcher.</p>
+		<pre><code data-language="javascript">
+		it("and has a positive case", function() {
+		  expect(true).toBe(true);
+		});
+		it("and can have a negative case", function() {
+	      expect(false).not.toBe(true);
+	  	});
+		</pre></code>
+
+		<strong>Included Matchers</strong>
+		<p>Jasmine has a rich set of matchers included. Each is used here - all expectations and specs pass. 
+		There is also the ability to write custom matchers for when a project's domain calls for specific assertions
+		that are not included below.</p>
+
+		<pre><code data-language="javascript">
+		describe("Included matchers:", function() {
+			it("The 'toBe' matcher compares with ===", function() {
+			  var a = 12;
+			  var b = a;
+
+			  expect(a).toBe(b);
+			  expect(a).not.toBe(null);
+			});
+		  	it("works for simple literals and variables", function() {
+		      var a = 12;
+		      expect(a).toEqual(12);
+		    });
+
+		    it("should work for objects", function() {
+		      var foo = {
+		        a: 12,
+		        b: 34
+		      };
+		      var bar = {
+		        a: 12,
+		        b: 34
+		      };
+		      expect(foo).toEqual(bar);
+		    });
+		});
+		</pre></code>
+
+		<pre><code>
+		it("The 'toBeDefined' matcher compares against 'undefined'", function() {
+		    var a = {
+		      foo: "foo"
+		    };
+
+		    expect(a.foo).toBeDefined();
+		    expect(a.bar).not.toBeDefined();
+		});
+		</pre></code>
+		<pre><code>
+		it("The 'toBeDefined' matcher compares against 'undefined'", function() {
+		    var a = {
+		      foo: "foo"
+		    };
+
+		    expect(a.foo).toBeDefined();
+		    expect(a.bar).not.toBeDefined();
+	    });
+		</pre></code>
+		<p>There are a lot of matchers, you should visit <a href="https://jasmine.github.io">Jasmine Docs</a></p>
+	`;
+	// ********************************** 
 	learnAboutFlagsContent = `Here i will show you how boolean variables can help us reach different conditions.
     Using flags to change the return of some method helps us reach certain conditions in our code.<br>
     <strong>For example:</strong><br>
     <p>If you have some logic inside a callback like this in your controller:</p>
-    <pre><code>
+    <pre><code data-language="javascript">
     function _solicitar(id){
     	yourService.solicitar(_request).then(_successCallBack, _errorCallBack); <span class="comment">//API call</span>
     }
@@ -25,7 +134,7 @@ export class ContentService implements OnInit {
     </code></pre>
     <p>We have to to reach all the conditions in order to reach a high coverage unit test, but how?</p>
     <p>The following code is a API access service mock, we will make use of $q Angular Service to mock asynchronous calls</p>
-    <pre><code>
+    <pre><code data-language="javascript">
     var serviceError; <span class="comment">//Don't forget to set this variable to false inside your beforeEach(inject(function(...))) block so you can always access the success CallBack for this request</span>
     .
     .
@@ -96,7 +205,7 @@ export class ContentService implements OnInit {
     }))
     </code></pre>
     <p>Now we need another IT test suite to test the second condition, like this:</p>
-    <pre><code>
+    <pre><code data-language="javascript">
     it('Should set greetings to Hello World', function(){ <span class="comment">//This is the second condition response altData being passed now!</span>
     	alternativeData = true; <span class="comment">//See? i am setting alternativeData to TRUE now (before instanciating the controller) so we can resolve the altData response object</span>
     	yourController = createController(); <span class="comment">//Now we create the controller again with the alternativeData pointing to TRUE!</span>
@@ -111,12 +220,12 @@ export class ContentService implements OnInit {
     	expect(yourController.greetings).toEqual('Hello World');
     })
     </code></pre>`;
-
+    // ********************************** 
     mockAModalContent = `<p>Mocking a modal is a piece of cake. In this part of the documentation you will learn how to build the 
     structure of a $uibModal service from UI Bootstrap module so you can mock it easily.</p>
     <p>Inside a beforeEach block, you will $provide a service like this:</p>
 
-    <pre><code>
+    <pre><code data-language="javascript">
     beforeEach(module(function($provide){
 	    $provide.service('$uibModal',function(){
 	        this.open = jasmine.createSpy('open').and.callFake(function(options){
@@ -131,7 +240,7 @@ export class ContentService implements OnInit {
     	<li><strong>modalInstance: </strong><p> this is the mocked object of a modal instance which we will be building now</p></li>
     </ul>
     <p>Above your first beforeEach block you will declare your modalInstance object like this:</p>
-    <pre><code>
+    <pre><code data-language="javascript">
     var modalInstance = {
     	result: {
     		then: function(confirmCallBack, cancelCallBack){
@@ -154,7 +263,7 @@ export class ContentService implements OnInit {
     <p>Mocking this structure will enable you of entering a modal async call when you have some action going on if a user chooses YES or NO</p>
     <p>Now let's see an exemple of a test suite where we are opening a modal and when the user presses YES, it will print 'Hello World' to the screen</p>
     <strong>someController.js</strong>
-    <pre><code>
+    <pre><code data-language="javascript">
     vm.openDecisionDialog = _openDecisionDialog;
 	    function _openDecisionDialog(){
 	    	$uibModal.open({
@@ -180,10 +289,5 @@ export class ContentService implements OnInit {
     </code></pre>
     <strong>SO EASY!!</strong>`;
 	
-
-
-	ngOnInit(){
-		
-	}
     
 }

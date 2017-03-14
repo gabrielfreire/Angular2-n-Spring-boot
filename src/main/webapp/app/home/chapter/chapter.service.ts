@@ -35,7 +35,7 @@ export class ChapterService{
 								"Coming Soon...");
 	chapterItAndDescribe = new Chapter("it() and describe()", 
 								"Definitions for it() function and describe() function", 
-								"Coming Soon...");
+								this.contentService.itAndDescribe);
 
 	getChapters(){
 		return this.chapters;

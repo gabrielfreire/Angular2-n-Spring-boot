@@ -48,7 +48,7 @@ export class NavbarComponent implements OnInit {
             this.swaggerEnabled = profileInfo.swaggerEnabled;
         });
     }
-
+    
     changeLanguage(languageKey: string) {
       this.languageService.changeLanguage(languageKey);
     }
