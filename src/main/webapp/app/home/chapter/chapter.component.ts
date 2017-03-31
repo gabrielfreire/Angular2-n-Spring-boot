@@ -14,7 +14,11 @@ export class ChapterComponent implements OnInit {
 		//TODO something when this component is created	
 	}
 	ngOnInit(){
+		//for log purposes
+		console.log('-> loading chapters...');
 		//Get the chapters
 		this.chapters = this.chapterService.getChapters();
+		//for log purposes
+		console.log('-> chapters loaded!');
 	}
 }

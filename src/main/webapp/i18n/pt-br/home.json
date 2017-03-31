@@ -1,6 +1,6 @@
 {
     "home": {
-        "title": "Bem vindo ao Karma for Gods!",
+        "title": "Bem vindo ao Guia rápido de Karma!",
         "subtitle": "Esta é um guia EXTREMAMENTE rápido de testes unitários com Jasmine/Karma",
         "logged": {
             "message": "Você está logado como \"{{username}}\"."

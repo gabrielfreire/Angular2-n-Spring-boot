@@ -8,10 +8,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.inject.Inject;
 
@@ -24,6 +21,7 @@ public class AlgorithmsResource {
     private final Logger log = LoggerFactory.getLogger(AlgorithmsResource.class);
 
     private final AlgorithmsService algorithmsService;
+    private String type;
 
     public AlgorithmsResource(AlgorithmsService algorithmsService){
         this.algorithmsService = algorithmsService;
@@ -44,6 +42,18 @@ public class AlgorithmsResource {
         log.debug("Sorting an array using Bubble Sort");
         AlgorithmResponseObject sortedArray = new AlgorithmResponseObject(algorithmsService.bubbleSort(arrayOfNumbers));
         return new ResponseEntity<>(sortedArray, HttpStatus.OK);
+    }
+
+    @GetMapping(path = "/type", produces = { MediaType.APPLICATION_JSON_VALUE, MediaType.TEXT_PLAIN_VALUE })
+    public ResponseEntity<String> getType(){
+        return new ResponseEntity(this.type, HttpStatus.OK);
+    }
+
+    @PostMapping(path = "/type", produces = { MediaType.APPLICATION_JSON_VALUE, MediaType.TEXT_PLAIN_VALUE })
+    public ResponseEntity<String> saveType(@RequestBody String type){
+        this.type = type;
+        String result = "Type changed to " + type;
+        return new ResponseEntity(result, HttpStatus.OK);
     }
 
 }
