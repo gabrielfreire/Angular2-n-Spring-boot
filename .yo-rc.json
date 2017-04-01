@@ -30,6 +30,8 @@
     "languages": [
       "en",
       "pt-br"
-    ]
+    ],
+    "herokuAppName": "karmaforgods",
+    "serviceDiscoveryType": false
   }
 }

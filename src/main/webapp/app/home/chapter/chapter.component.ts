@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Chapter } from './chapter.model';
 import { ChapterService } from './chapter.service';
 import { JhiLanguageService } from 'ng-jhipster';
+import { HighlightJsContentDirective } from 'angular2-highlight-js/lib/highlight-js-content.directive';
 
 @Component({
     selector: 'chapter',

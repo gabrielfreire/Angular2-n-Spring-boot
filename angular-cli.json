@@ -18,14 +18,20 @@
       "prefix": "jhi",
       "mobile": false,
       "styles": [
+        "//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/styles/monokai_sublime.min.css",
         "content/css/main.css"
       ],
-      "scripts": [],
+      "scripts": [
+        "//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/highlight.min.js",
+        "//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/languages/typescript.min.js"
+      ],
       "environments": {}
     }
   ],
   "addons": [],
-  "packages": [],
+  "packages": [
+    "node_modules/angular2-highlight-js/lib"
+  ],
   "e2e": {
     "protractor": {
       "config": "src/test/javascript/protractor.conf.js"

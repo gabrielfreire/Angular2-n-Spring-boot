@@ -30,6 +30,7 @@ import {
     ErrorComponent
 } from './layouts';
 
+import { HighlightJsModule, HighlightJsService } from 'angular2-highlight-js';
 
 @NgModule({
     imports: [
@@ -37,6 +38,7 @@ import {
         LayoutRoutingModule,
         Ng2Webstorage.forRoot({ prefix: 'jhi', separator: '-'}),
         Ng2JhSharedModule,
+        HighlightJsModule,
         Ng2JhAdminModule,
         Ng2JhAccountModule,
         Ng2JhEntityModule
@@ -58,6 +60,7 @@ import {
         { provide: Document, useValue: document },
         customHttpProvider(),
         PaginationConfig,
+        HighlightJsService,
         UserRouteAccessService,
         AlgorithmService,
         ChapterService,
