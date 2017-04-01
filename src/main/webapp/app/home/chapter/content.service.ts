@@ -34,10 +34,10 @@ export class ContentService {
 		It is chained with a Matcher function, which takes the expected value.</p>
 		<pre><code class="javascript highlight">
 		it("and has a positive case", function() {
-		  expect(true).toBe(true);
+		  	expect(true).toBe(true);
 		});
 		it("and can have a negative case", function() {
-	      expect(false).not.toBe(true);
+	      	expect(false).not.toBe(true);
 	  	});
 		</pre></code>
 		<strong>Matchers</strong>
@@ -48,10 +48,10 @@ export class ContentService {
 		the matcher.</p>
 		<pre><code class="javascript highlight">
 		it("and has a positive case", function() {
-		  expect(true).toBe(true);
+		  	expect(true).toBe(true);
 		});
 		it("and can have a negative case", function() {
-	      expect(false).not.toBe(true);
+	      	expect(false).not.toBe(true);
 	  	});
 		</pre></code>
 
@@ -69,6 +69,7 @@ export class ContentService {
 			  expect(a).toBe(b);
 			  expect(a).not.toBe(null);
 			});
+		
 		  	it("works for simple literals and variables", function() {
 		      var a = 12;
 		      expect(a).toEqual(12);
@@ -155,8 +156,8 @@ export class ContentService {
         			deferred.reject();
         		}
         		return deferred.promise;
-	        }
-	    };
+	        };
+	    });
     }))
     </code></pre>
     <p>Ok, our mock is done and we can access the asyn callbacks! now let's test the conditions.</p>
@@ -173,7 +174,7 @@ export class ContentService {
     	expect(yourController.data).toBeDefined();
     	expect(yourController.data).toEqual({ message: 'Hi' });
     	expect(yourController.greetings).toEqual('Hi World');
-    })
+    });
     </code></pre>
     <p>In order to return the alternative data, we need an extra condition inside our async mocked function like this:</p>
     <pre><code class="javascript highlight">
@@ -202,7 +203,7 @@ export class ContentService {
         		return deferred.promise;
 	        }
 	    };
-    }))
+    }));
     </code></pre>
     <p>Now we need another IT test suite to test the second condition, like this:</p>
     <pre><code class="javascript highlight">
@@ -218,7 +219,7 @@ export class ContentService {
     	expect(yourController.data).toBeDefined();
     	expect(yourController.data).toEqual({ message: 'Hello' });
     	expect(yourController.greetings).toEqual('Hello World');
-    })
+    });
     </code></pre>`;
     // ********************************** 
     mockAModalContent = `<p>Mocking a modal is a piece of cake. In this part of the documentation you will learn how to build the 
@@ -265,17 +266,17 @@ export class ContentService {
     <strong>someController.js</strong>
     <pre><code class="javascript highlight">
     vm.openDecisionDialog = _openDecisionDialog;
-	    function _openDecisionDialog(){
-	    	$uibModal.open({
-	    		YOUR CONFIGURATION
-	    	}).result.then(function(decision){
-	    		if(decision){
-	    			vm.greetings = 'Hello World';
-	    		}else{
-	    			vm.greetings = undefined;
-	    		}
-	    	});
-	    }
+    function _openDecisionDialog(){
+    	$uibModal.open({
+    		YOUR CONFIGURATION
+    	}).result.then(function(decision){
+    		if(decision){
+    			vm.greetings = 'Hello World';
+    		}else{
+    			vm.greetings = undefined;
+    		}
+    	});
+    }
     </code></pre>
     <strong>someController.spec.js</strong>
     <pre><code class="javascript highlight">
